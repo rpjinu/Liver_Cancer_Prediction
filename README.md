@@ -51,37 +51,8 @@ streamlit run app.py
 - 🎨 **Streamlit** - Web interface
 - 📦 **Joblib** - Model & encoder serialization
 
-## 📝 Example Usage
-```python
-import joblib
-import numpy as np
-
-# Load model & encoder
-model = joblib.load("models/liver_cancer_model.pkl")
-encoder = joblib.load("models/encoder.pkl")
-
-# Sample patient data
-user_input = {
-    "Age": 50,
-    "Gender": "Male",
-    "Alcohol_Consumption": "Yes",
-    "Smoking_Status": "Smoker",
-    "Hepatitis_B_Status": "Positive",
-    "Hepatitis_C_Status": "Negative",
-    "Obesity": "Yes",
-    "Diabetes": "No",
-    "Seafood_Consumption": "Moderate",
-    "Herbal_Medicine_Use": "No",
-    "Healthcare_Access": "Good",
-    "Preventive_Care": "Yes"
-}
-
-# Encode input & predict
-encoded_input = encoder.transform([user_input])
-prediction = model.predict(encoded_input)
-
-print("Liver Cancer Risk:", "High" if prediction[0] == 1 else "Low")
-```
+##Model u Get From code:-
+As model size so big even lfs storage full
 
 ## 📌 Future Improvements
 - 📈 Improve model accuracy with **feature selection & hyperparameter tuning**
